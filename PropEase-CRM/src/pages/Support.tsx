@@ -10,8 +10,8 @@ interface Ticket {
   title: string;
   description: string;
   status: 'Open' | 'In Progress' | 'Resolved' | 'Closed';
-  priority: 'Low' | 'Medium' | 'High' | 'Urgent';
-  category: string;
+  priority: 'Low' | 'Medium' | 'High' | 'Critical';
+  category: 'Maintenance' | 'HVAC' | 'Plumbing' | 'Electrical' | 'Parking' | 'Security' | 'Noise' | 'Other';
   createdAt: string;
   updatedAt: string;
   tenantId?: string;
@@ -230,7 +230,7 @@ export default function Support() {
       case 'Low': return 'bg-green-100 text-green-800';
       case 'Medium': return 'bg-yellow-100 text-yellow-800';
       case 'High': return 'bg-orange-100 text-orange-800';
-      case 'Urgent': return 'bg-red-100 text-red-800';
+      case 'Critical': return 'bg-red-100 text-red-800';
       default: return 'bg-gray-100 text-gray-800';
     }
   };
@@ -349,7 +349,7 @@ export default function Support() {
             <option value="Low">Low</option>
             <option value="Medium">Medium</option>
             <option value="High">High</option>
-            <option value="Urgent">Urgent</option>
+            <option value="Critical">Critical</option>
           </select>
 
           <select
@@ -359,9 +359,13 @@ export default function Support() {
           >
             <option value="all">All Categories</option>
             <option value="Maintenance">Maintenance</option>
-            <option value="Billing">Billing</option>
-            <option value="General">General</option>
-            <option value="Technical">Technical</option>
+            <option value="HVAC">HVAC</option>
+            <option value="Plumbing">Plumbing</option>
+            <option value="Electrical">Electrical</option>
+            <option value="Parking">Parking</option>
+            <option value="Security">Security</option>
+            <option value="Noise">Noise</option>
+            <option value="Other">Other</option>
           </select>
         </div>
       </div>
@@ -394,7 +398,7 @@ export default function Support() {
                     <option value="Low">Low</option>
                     <option value="Medium">Medium</option>
                     <option value="High">High</option>
-                    <option value="Urgent">Urgent</option>
+                    <option value="Critical">Critical</option>
                   </select>
                 </div>
               </div>
@@ -410,9 +414,13 @@ export default function Support() {
                   >
                     <option value="">Select Category</option>
                     <option value="Maintenance">Maintenance</option>
-                    <option value="Billing">Billing</option>
-                    <option value="General">General</option>
-                    <option value="Technical">Technical</option>
+                    <option value="HVAC">HVAC</option>
+                    <option value="Plumbing">Plumbing</option>
+                    <option value="Electrical">Electrical</option>
+                    <option value="Parking">Parking</option>
+                    <option value="Security">Security</option>
+                    <option value="Noise">Noise</option>
+                    <option value="Other">Other</option>
                   </select>
                 </div>
                 <div>
@@ -651,7 +659,7 @@ export default function Support() {
                 <option value="Low">Low</option>
                 <option value="Medium">Medium</option>
                 <option value="High">High</option>
-                <option value="Urgent">Urgent</option>
+                <option value="Critical">Critical</option>
               </select>
             </div>
           </div>
@@ -667,9 +675,13 @@ export default function Support() {
               >
                 <option value="">Select Category</option>
                 <option value="Maintenance">Maintenance</option>
-                <option value="Billing">Billing</option>
-                <option value="General">General</option>
-                <option value="Technical">Technical</option>
+                <option value="HVAC">HVAC</option>
+                <option value="Plumbing">Plumbing</option>
+                <option value="Electrical">Electrical</option>
+                <option value="Parking">Parking</option>
+                <option value="Security">Security</option>
+                <option value="Noise">Noise</option>
+                <option value="Other">Other</option>
               </select>
             </div>
             <div>
